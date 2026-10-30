@@ -1,6 +1,9 @@
 ---
 name: meme-sounds
 description: Pick a meme sound for a moment in a short video and land it on that moment. A catalogue of 56 recordings short-form video reaches for (Vine boom, bruh, the wrong-answer buzzer, the sad violin), each with its story, what it usually marks, and its measured hit; a fetcher that brings the files to the machine; a cue tool that puts the hit on the second. Use when editing a video, scripting one with sound cues, or asked which sound fits a beat.
+license: MIT
+metadata:
+  version: "1.0.0"
 ---
 
 # Meme sounds
