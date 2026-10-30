@@ -6,6 +6,7 @@
     python3 scripts/fetch.py --to DIR         # into another folder
     python3 scripts/fetch.py --check          # report what is there and whether it matches, download nothing
 
+The host stalls now and then, so each file gets three tries on a 15 s timeout.
 A file whose sha256 already matches is left alone. One that downloads with another hash is kept with
 .mismatch on its name and reported: the page changed its file, so listen before you use it.
 """
@@ -38,14 +39,14 @@ def sha256(path):
 def download(url, dest):
     req = urllib.request.Request(url, headers={"User-Agent": AGENT})
     tmp = dest.with_suffix(dest.suffix + ".part")
-    for attempt in (1, 2):
+    for attempt in (1, 2, 3):
         try:
-            with urllib.request.urlopen(req, timeout=30) as r, open(tmp, "wb") as f:
+            with urllib.request.urlopen(req, timeout=15) as r, open(tmp, "wb") as f:
                 f.write(r.read())
             tmp.rename(dest)
             return True
         except Exception as e:  # noqa: BLE001 - report and retry once
-            if attempt == 2:
+            if attempt == 3:
                 print("  %s: %s" % (url, e))
                 tmp.unlink(missing_ok=True)
                 return False
