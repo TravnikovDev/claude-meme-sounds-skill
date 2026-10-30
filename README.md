@@ -1,4 +1,4 @@
-# meme-sounds-skill
+# claude-meme-sounds-skill
 
 An [Agent Skill](https://github.com/anthropics/skills) for Claude Code, Codex and the other agents that
 read `SKILL.md`: pick a meme sound for a moment in a short video and land it on that moment.
@@ -25,7 +25,7 @@ is those three things.
 ## Install
 
 ```bash
-npx skills add TravnikovDev/meme-sounds-skill
+npx skills add TravnikovDev/claude-meme-sounds-skill
 ```
 
 or copy `skills/meme-sounds/` into your project's `.claude/skills/` (Claude Code) or wherever your

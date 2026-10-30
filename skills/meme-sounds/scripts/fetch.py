@@ -21,7 +21,7 @@ from pathlib import Path
 SKILL = Path(__file__).resolve().parent.parent
 CATALOG = SKILL / "catalog.json"
 FETCHED = SKILL / "fetched"
-AGENT = "meme-sounds-skill/1.0 (+https://github.com/TravnikovDev/meme-sounds-skill)"
+AGENT = "meme-sounds-skill/1.0 (+https://github.com/TravnikovDev/claude-meme-sounds-skill)"
 
 
 def catalog():
