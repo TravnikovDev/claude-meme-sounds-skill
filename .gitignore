@@ -1,0 +1,6 @@
+# the recordings fetch.py brings down belong to their owners and stay on your machine
+skills/meme-sounds/fetched/
+*.part
+*.mismatch
+__pycache__/
+.DS_Store
